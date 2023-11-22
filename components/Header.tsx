@@ -2,8 +2,20 @@ import React from "react";
 import Logo from "./Logo";
 import DarkModeToggle from "./DarkModeToggle";
 import UserButton from "./UserButton";
+import {
+  handleAuth,
+  getKindeServerSession,
+} from "@kinde-oss/kinde-auth-nextjs/server";
+import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/types";
+import Link from "next/link";
+import { LuMessagesSquare } from "react-icons/lu";
+type UserProps = KindeUser | null;
 
-function Header() {
+async function Header() {
+  const { getUser } = getKindeServerSession();
+  const user: UserProps = await getUser();
+  console.log(user);
+
   return (
     <header className=" sticky top-0 bg-white dark:bg-black">
       <nav className=" flex flex-col sm:flex-row items-center p-5 pl-2 bg-white dark:bg-black max-w-7xl mx-auto">
@@ -12,11 +24,19 @@ function Header() {
           {/* language select */}
 
           {/* session */}
-
+          {user ? (
+            <>
+              <Link href={"/chat"} prefetch={false}>
+                <LuMessagesSquare />
+              </Link>
+            </>
+          ) : (
+            <Link href={"/pricing"}>Pricing</Link>
+          )}
           {/* darkmode */}
           <DarkModeToggle />
           {/* user-btn */}
-          <UserButton />
+          <UserButton user={user} />
         </div>
       </nav>
 
