@@ -24,7 +24,7 @@ function UserButton({ user }: { user: KindeUser | null }) {
         <LoginLink postLoginRedirectURL="/">Sign in</LoginLink>
       </Button>
     );
-  console.log(user.picture);
+  // console.log(user.picture);
   const name = user.given_name + " " + user.family_name;
   return (
     <DropdownMenu>

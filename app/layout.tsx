@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Nabla } from "next/font/google";
+import { Inter, Nabla, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 const nabla = Nabla({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700", "300", "600", "900"],
+});
 
 export const metadata: Metadata = {
   title: "PEPRR",
@@ -19,7 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`relative flex flex-col min-h-screen transition-all  ${poppins.className}`}
+      >
+        <div className="dark:bg-[#1e672a] bg-[#0E9297]  absolute top-[-6rem] right-[11rem] h-[31.25rem] -z-10 w-[31.25rem] rounded-full dark:blur-[10rem] blur-[12rem] sm:w-[68.75rem]"></div>
+        <div className="dark:bg-[#19133a] bg-[#A0FFBF] absolute top-[-1rem] left-[-35rem] h-[31.25rem] -z-10 w-[50rem] rounded-full dark:blur-[10rem] blur-[12rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
