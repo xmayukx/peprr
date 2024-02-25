@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Nabla, Poppins } from "next/font/google";
+import { Inter, Nabla, Poppins, Silkscreen } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 const nabla = Nabla({ subsets: ["latin"] });
+const silksk = Silkscreen({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "700", "300", "600", "900"],
@@ -26,8 +30,10 @@ export default function RootLayout({
       <body
         className={`relative flex flex-col min-h-screen transition-all  ${poppins.className}`}
       >
-        <div className="dark:bg-[#1e672a] bg-[#0E9297]  absolute top-[-6rem] right-[11rem] h-[31.25rem] -z-10 w-[31.25rem] rounded-full dark:blur-[10rem] blur-[12rem] sm:w-[68.75rem]"></div>
-        <div className="dark:bg-[#19133a] bg-[#A0FFBF] absolute top-[-1rem] left-[-35rem] h-[31.25rem] -z-10 w-[50rem] rounded-full dark:blur-[10rem] blur-[12rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        <div className="dark:bg-[#49108B] bg-[#E26EE5]  absolute top-[-6rem] right-[11rem] h-[31.25rem] -z-10 w-[31.25rem] rounded-full dark:blur-[10rem] blur-[12rem] sm:w-[68.75rem]"></div>
+        <div className="dark:bg-[#7E30E1] bg-[#F3F8FF] absolute top-[-1rem] left-[-35rem] h-[31.25rem] -z-10 w-[50rem] rounded-full dark:blur-[10rem] blur-[12rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        <div className="dark:bg-[#602424] bg-[#F3CCFF]  absolute bottom-[-6rem] right-[11rem] h-[31.25rem] -z-10 w-[31.25rem] rounded-full dark:blur-[10rem] blur-[12rem] sm:w-[68.75rem]"></div>
+        <div className="dark:bg-[#553535] bg-[#FFFFD0] absolute bottom-[-1rem] left-[-35rem] h-[31.25rem] -z-10 w-[50rem] rounded-full dark:blur-[10rem] blur-[12rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

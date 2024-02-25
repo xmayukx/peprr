@@ -19,7 +19,7 @@ async function Header() {
   console.log(user);
 
   return (
-    <header className="border rounded-2xl dark:border-slate-800 border-white/30 backdrop-blur-xl dark:bg-black/20 bg-white/20 sticky top-5 mt-5 mx-4 z-50">
+    <header className="border rounded-2xl dark:border-slate-800/20 border-white/30 backdrop-blur-xl dark:bg-black/20 bg-gray-400/20 sticky top-5 mt-5 mx-4 z-50 shadow-lg">
       <nav className="flex flex-col sm:flex-row items-center p-4 pl-2 max-w-7xl mx-auto">
         <Logo />
         <div className=" flex-1 flex items-center justify-end space-x-4">

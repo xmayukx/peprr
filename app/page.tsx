@@ -9,10 +9,10 @@ export default function Home() {
         <div className=" mx-auto max-w-7xl px-6 lg:px-8">
           <div className=" mx-auto max-w-2xl text-center ">
             <h1 className=" text-4xl font-bold tracking-tight sm:text-6xl ">
-              Chat with your buddies!
+              Code Chat Compute
             </h1>
             <p className=" mt-6 text-lg leading-8 text-black dark:text-white">
-              You can speak your language, they can speak theirs.{" "}
+              AI-Powered Conversations, Limitless Innovation.{" "}
               <span className=" dark:text-indigo-300 text-indigo-600 underline decoration-dashed transition-all dark:hover:decoration-indigo-100 hover:decoration-indigo-900 underline-offset-4">
                 Let AI handle translation for you.
               </span>
